@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line to Polygon | Area Optimizer</title>
+    <meta name="description" content="길이가 n인 선분으로 만든 다각형의 넓이 최적화 시뮬레이션">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/line_polygon/assets/index-C2JwqDG7.js"></script>
+  <link rel="stylesheet" crossorigin href="/line_polygon/assets/index-rmYz59JR.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <span class="icon">⬢</span>
+                <h1>Area <span>Maximizer</span></h1>
+            </div>
+            <p class="subtitle">임의의 길이 n으로 만드는 최대 넓이 도형 시뮬레이션</p>
+        </header>
+
+        <main>
+            <section class="simulation-container">
+                <div class="canvas-wrapper">
+                    <canvas id="simulationCanvas"></canvas>
+                    <div class="shape-info-overlay">
+                        <div class="info-item">
+                            <span class="label">Sides</span>
+                            <span id="sidesValue" class="value">3</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Area</span>
+                            <span id="areaValue" class="value">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label for="sideCount">Number of Sides (k)</label>
+                            <span id="sideCountLabel">3</span>
+                        </div>
+                        <input type="range" id="sideCount" min="3" max="50" value="3" step="1">
+                        <div class="range-labels">
+                            <span>Triangle</span>
+                            <span>Circle-ish</span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="control-header">
+                            <label for="perimeter">Perimeter Length (L)</label>
+                            <span id="perimeterLabel">400</span>
+                        </div>
+                        <input type="range" id="perimeter" min="100" max="800" value="400" step="10">
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Theoretical Max (Circle)</h3>
+                            <p id="maxArea">0.00</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Efficiency</h3>
+                            <p id="efficiency">0.00%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Area Maximizer Lab. Built for Visual Mathematics.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
