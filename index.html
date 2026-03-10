@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/line_polygon/assets/index-C5Zj-hYC.js"></script>
-  <link rel="stylesheet" crossorigin href="/line_polygon/assets/index-CBIFOeFr.css">
+  <script type="module" crossorigin src="/line_polygon/assets/index-B6lr7U3P.js"></script>
+  <link rel="stylesheet" crossorigin href="/line_polygon/assets/index-CbjJgHHR.css">
 </head>
 
 <body>
     <div id="app">
         <header class="animate-in">
             <div class="logo-group">
-                <h1>Area Maximizer</h1>
+                <h1 class="main-title">주어진 길이의 선분으로 만들 수 있는 가장 넓은 면적의 도형은 무엇일까요?</h1>
                 <p>도형 면적 최적화 시뮬레이션</p>
             </div>
-            <div class="deployment-badge">v2.1 Premium</div>
+            <div class="deployment-badge">v2.2 Premium</div>
         </header>
 
         <main>
@@ -27,7 +27,7 @@
                 <canvas id="simulationCanvas"></canvas>
                 <div class="canvas-overlay">
                     <span class="stat-label">면적 효율성</span>
-                    <span id="efficiencyValue" class="big-stat">0.0%</span>
+                    <span id="efficiencyValue" class="stat-value-small">0.0%</span>
                 </div>
             </section>
 
@@ -35,12 +35,13 @@
                 <div class="control-card">
                     <h2>설정</h2>
 
-                    <div class="slider-group">
-                        <div class="slider-header">
-                            <span class="stat-label">변의 수 (k)</span>
-                            <span id="sideCountDisplay" class="current">3</span>
+                    <div class="control-group">
+                        <span class="stat-label">변의 수 (k)</span>
+                        <div class="stepper-control">
+                            <button id="minusBtn" class="stepper-btn">−</button>
+                            <input type="number" id="sideCountInput" min="3" max="1000" value="3">
+                            <button id="plusBtn" class="stepper-btn">+</button>
                         </div>
-                        <input type="range" id="sideCountSlider" min="3" max="50" value="3" step="0.01">
                     </div>
 
                     <div class="slider-group">
